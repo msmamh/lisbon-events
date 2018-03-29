@@ -1,0 +1,29 @@
+<!--Single Event Dialog -->
+<div *ngIf="data.lat&&data.lng">
+  <h2 mat-dialog-title>{{ data.label }}</h2>
+  <div *ngIf="data.details" [innerHTML]="data.details | html"> </div>
+
+  <mat-dialog-content>
+    <agm-map   [latitude]="data.lat"
+               [longitude]="data.lng"
+               [zoom]="10"
+               [disableDefaultUI]="false"
+               [zoomControl]="false">
+
+      <agm-marker
+              [latitude]="data.lat"
+              [longitude]="data.lng"
+              [label]="test"
+              [draggable]="false">
+        <agm-info-window>
+          <strong>{{ data.label }}</strong>
+        </agm-info-window>
+
+      </agm-marker>
+    </agm-map>
+  </mat-dialog-content>
+  <hr>
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="onClose()">CLOSE</button>&nbsp;
+  </mat-dialog-actions>
+</div>

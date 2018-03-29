@@ -1,0 +1,18 @@
+::ng-deep #items{
+    list-style-type: none;
+    display: grid;
+    padding:10px;
+}
+
+::ng-deep #item{
+    border: 3px dashed #006600;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#item:hover{
+    background-color: rgba(255, 0, 0, 0.22);
+}
+
+

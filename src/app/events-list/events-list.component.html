@@ -1,0 +1,7 @@
+<!-- Events List section -->
+<span>{{ LoadingLabel }}</span>
+<ul id="items" *ngIf="items" > <!--if results available -->
+  <li id="item" *ngFor="let item of items.event" (click)="openDialog(item.location.relationship[0].targetPOI, item.label[0].value,item.description[0].value);"> <!-- // loop results one by one -->
+  {{ item.label[0].value }}
+  </li>
+</ul>
